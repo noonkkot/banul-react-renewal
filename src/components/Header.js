@@ -45,7 +45,7 @@ function Header() {
         <ul>
           {menuItems.map((menuItem, index) => (
             <li key={index} className="hd_menu" onMouseEnter={() => setHoveredMenuId(index)} onMouseLeave={() => setHoveredMenuId(null)}>
-            <a href="#">{menuItem.label}</a>
+            {menuItem.label}
             {hoveredMenuId === index && menuItem.subMenuItems.length > 0 && <SubMenu subMenuItems={menuItem.subMenuItems} />}
             </li>
           ))}
