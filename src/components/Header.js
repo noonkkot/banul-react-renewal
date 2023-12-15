@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function SubMenuItem({ label }) {
-  return <li><a href="#">{label}</a></li>;
+  return <li>{label}</li>;
 }
 
 function SubMenu({ subMenuItems }) {
