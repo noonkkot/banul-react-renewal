@@ -1,0 +1,222 @@
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {padding: 0; margin: 0 auto;}
+li {list-style-type: none;}
+a {text-decoration: none; color: inherit;}
+body {font-family: 'Pretendard-Regular', sans-serif;}
+
+.App {
+  max-width: 1200px; text-align: center;
+}
+
+#hd_slider {
+  height: 90px; overflow: hidden;  
+}
+
+#hd_slider > div > div > div > div.slick-slide > div > div > img {
+  width: 100%;
+}
+
+
+h1.hd_logo {
+  padding-top: 25px; padding-bottom: 20px;
+}
+.hd_nav>ul {
+  display: flex;
+}
+.hd_nav>ul>.hd_menu {
+  flex: 1; position: relative;
+}
+
+.hd_nav>ul>.hd_menu>a {
+  color: orangered; padding: 15px 0; display: block; 
+}
+
+.hd_nav>ul>.hd_menu>ul {
+  position: absolute; z-index: 5; left: 0; right: 0;
+  background-color: #fff;
+}
+.hd_nav>ul>.hd_menu>ul li {}
+.hd_nav>ul>.hd_menu>ul li a {
+  font-size: 14px; padding: 10px 0; display: block;
+}
+
+
+/* HeroSwiper.js */
+.swiper-button-prev {
+  left: var(--swiper-navigation-sides-offset, 50px);
+  right: auto;
+}
+
+.swiper-button-next {
+  right: var(--swiper-navigation-sides-offset, 50px);
+  left: auto;
+}
+
+#root > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper > div.swiper-button-prev,
+#root > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper > div.swiper-button-next {
+  background: #fff; width: 40px; height: 40px;
+  border-radius: 50%;
+}
+
+#root > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper > div.swiper-button-prev::after,
+#root > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper > div.swiper-button-next::after {
+  color: orangered; font-weight: 900; font-size: 16px;
+}
+
+#root > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper {
+  width: 100%; padding: 30px; box-sizing: border-box; }
+
+#root > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper > div.swiper-wrapper > div.swiper-slide {
+  width: 100%; border-radius: 20px; overflow: hidden;
+
+}
+
+#root > div > div.swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden.mySwiper > div.swiper-wrapper > div.swiper-slide img {
+  width: 100%; 
+}
+
+/* Product@@.js */
+#root > div > div.product_section {
+  margin-bottom: 20px;
+}
+#root > div > div.product_section h3 {
+  font-size: 20px; padding: 10px 0 15px;
+}
+#root > div > div.product_section > div.product_wrapper {
+  width: 100%; box-sizing: border-box; 
+  padding: 30px; 
+}
+#root > div > div.product_section > div.product_wrapper > ul.product_container {
+  width: 100%; flex: 1; display: flex; gap: 30px; 
+}
+#root > div > div.product_section > div.product_wrapper > ul.product_container > li {
+  display: flex; flex: 1; flex-direction: column; 
+  box-sizing: border-box;
+}
+
+#root > div > div.product_section > div > ul > li > div.thumb {
+  position: relative;
+  width: 100%; padding: 0 0 360px ;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+#root > div > div.product_section > div > ul > li > div.thumb img {
+  position: absolute; top: 0; left: 0; right: 0;
+  width: 100%; height: 100%; object-fit: cover; transition: 0.3s;
+}
+#root > div > div.product_section > div > ul > li > div.thumb:hover img {
+  transform: scale(1.1);
+}
+
+#root > div > div.product_section > div > ul > li > div.info {
+  width: 100%; padding: 20px 0; height: auto;
+}
+
+#root > div > div.product_section > div > ul > li > div.info div.prod_name {
+  font-size: 15px; font-weight: 600; text-align: left; padding-bottom: 6px;
+}
+#root > div > div.product_section > div > ul > li > div.info div.prod_sub {
+  font-size: 13px; text-align: left; color: #888; padding-bottom: 6px;
+}
+#root > div > div.product_section > div > ul > li > div.info div.prod_price {
+  font-weight: 500; font-size: 14px; text-align: left;
+}
+
+
+#root > div > div.product_section > div > ul > li> div.thumb > div {
+  display: none;
+  position: absolute;
+  bottom: 0px; left: 0; right: 0;
+  opacity: 0; 
+  font-size: 16px;
+  color: #666;
+  animation: slideDown 0.3s ease-in-out forwards; 
+}
+
+#root > div > div.product_section > div > ul > li> div.thumb:hover > div {
+  display: block;
+  z-index: 15;
+  animation: slideUp 0.3s ease-in-out forwards; 
+}
+
+@keyframes slideUp {
+  from {
+    bottom: -20px;
+    opacity: 0;
+  }
+  to {
+    bottom: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    bottom: 20px; 
+    opacity: 1;
+  }
+  to {
+    bottom: -20px;
+    opacity: 0;
+  }
+}
+
+.ft_go_top {
+  position: fixed; bottom: 50px; right: 50px;
+  width: 50px; height: 50px; background-color: lightsalmon;
+  border-radius: 50%;
+}
+
+.ft_go_top button {
+  border: none; background: none; color: #fff; 
+  position: relative;
+}
+
+.ft_go_top button div {
+  position: absolute; transform: translateX(-50%);
+  font-size: 20px;
+}
+
+
+.ft_banul_custom {
+  width: 40%; margin: 0!important; text-align: left!important;
+  font-size: 16px; padding-top: 21px; padding-bottom: 20px;
+}
+.ft_banul_custom ul.info-box {
+  display: flex; flex-direction: row;
+}
+
+.ft_banul_custom ul.info-box li {
+  flex: auto; }
+
+
+
+.ft_banul_info {
+  width: 100%; padding: 20px 0 60px; 
+  font-size: 14px; line-height: 1.7;
+  display: flex; flex-direction: row;
+  text-align: left; color: #888;
+}
+
+.ft_banul_info .info-box:first-child {
+  flex: 4; 
+}
+.ft_banul_info .info-box:nth-child(2) {
+  flex: 2;
+}
+.ft_banul_info .info-box:last-child {
+  flex: 2;
+}
+
+
+/* #player {
+  width: 100%; height: 400px; background-color: bisque;
+} */
